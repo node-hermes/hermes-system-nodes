@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "system-nodes"
+version = "0.1.0"
+description = ""
+authors = ["floris vernieuwe <floris@vernieuwe.eu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.14"
+psutil = "^7.0.0"
+pythonping = "^1.1.4"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff.lint]
+select = ["E", "F"]
+ignore = ["E402"]
+
+[tool.ruff]
+line-length = 120
+exclude = ["old/**", "**.pyi", "**/.venv/**"]
+include = ["src/**.py", "test/**.py"]
+
+[tool.pyright]
+exclude = ["old/**", "**.pyi", "**/.venv/**"]

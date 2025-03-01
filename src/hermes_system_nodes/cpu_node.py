@@ -3,7 +3,6 @@ from typing import Literal
 
 import psutil
 from node_hermes_core.data import PhysicalDatapacket
-from node_hermes_core.depencency.node_dependency import NodeDependency
 from node_hermes_core.nodes.source_node import SourceNode
 
 

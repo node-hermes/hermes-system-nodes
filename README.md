@@ -1,5 +1,5 @@
-# Hermes storage nodes
-[![PyPI version](https://badge.fury.io/py/hermes-storage-nodes.svg)](https://pypi.org/project/hermes-storage-nodes)
+# Hermes system nodes
+[![PyPI version](https://badge.fury.io/py/hermes-system-nodes.svg)](https://pypi.org/project/hermes-system-nodes)
 
 A collection of nodes related capturing system metrics.
 
@@ -10,7 +10,7 @@ A collection of nodes related capturing system metrics.
 Install the package directly from PyPI using pip:
 
 ```bash
-pip install hermes-storage-nodes
+pip install hermes-system-nodes
 ```
 
 ### From Source
@@ -18,8 +18,8 @@ pip install hermes-storage-nodes
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/node-hermes/hermes-storage-nodes
-pip install -e hermes-storage-nodes
+git clone https://github.com/node-hermes/hermes-system-nodes
+pip install -e hermes-system-nodes
 ```
 
 ## Development

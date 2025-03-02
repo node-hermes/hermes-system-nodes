@@ -12,7 +12,7 @@ jobs:
 
     environment:
       name: pypi
-      url: https://pypi.org/project/hermes-storage-nodes
+      url: https://pypi.org/project/hermes-system-nodes
 
     permissions:
       contents: read

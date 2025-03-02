@@ -1,18 +1,20 @@
-[tool.poetry]
+[project]
 name = "hermes-system-nodes"
-version = "0.1.0"
-description = ""
-authors = ["floris vernieuwe <floris@vernieuwe.eu>"]
+dynamic = ["version"]
+description = "Nodes to capture system metrics"
+authors = [{ name = "floris vernieuwe", email = "floris@vernieuwe.eu" }]
 readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "node-hermes-core>=1.2.0",
+    "psutil>=7.0.0",
+    "pythonping>=1.1.4",
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9,<3.14"
-psutil = "^7.0.0"
-pythonping = "^1.1.4"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "ruff>=0.9.9",
+]
 
 [tool.ruff.lint]
 select = ["E", "F"]
@@ -20,8 +22,18 @@ ignore = ["E402"]
 
 [tool.ruff]
 line-length = 120
-exclude = ["old/**", "**.pyi", "**/.venv/**"]
+exclude = ["**.pyi", "**/.venv/**"]
 include = ["src/**.py", "test/**.py"]
 
 [tool.pyright]
-exclude = ["old/**", "**.pyi", "**/.venv/**"]
+ignore = ["**.pyi", "**/.venv/**"]
+
+[project.scripts]
+fbs-build-utils = "fbs_build_utils:cli"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
